@@ -1,0 +1,20 @@
+out=open("name.txt", mode="w")
+name= str(input("Enter your name: "))
+print(name,file=out)
+out.close()
+
+out2=open("name.txt",mode="r")
+print("Your name is",out2.read())
+out2.close()
+
+out3=open("number.txt", mode="r")
+number1=int(out3.readline())
+number2=int(out3.readline())
+print(number1+number2)
+out3.close()
+
+out4=open("test.txt", mode="r")
+number3=out4.readline()
+one,two,three,four= number3.split()
+result=int(one)+int(two)+int(three)+int(four)
+print(result)
